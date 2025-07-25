@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Credit Vendor Dashboard</title>
+  <link rel="stylesheet" href="style/webapp.css"> <!-- add styles later -->
+</head>
+<body>
+  <header>
+    <h1>📱 Credit Vendor Management</h1>
+    <nav>
+      <a href="dashboard.php">Dashboard</a>
+      <a href="sales.php">Sales</a>
+      <a href="stock.php">Card Stock</a>
+      <a href="cashflow.php">Cash In/Out</a>
+      <a href="report.php">Reports</a>
+      <a href="logout.php">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="dashboard">
+      <h2>📊 Overview</h2>
+      <p>Total Sales Today: <!-- echo PHP value --></p>
+      <p>Total Credit Balance: <!-- auto-calculate --></p>
+      <p>Low Stock Alerts: <!-- from stock.php --></p>
+    </section>
+
+    <section id="sales-entry">
+      <h2>🧾 Record a Sale</h2>
+      <form action="sales.php" method="POST">
+    
+          <!-- PHP loop: list vendors -->
+        </select>
+
+        <label for="card">Card Type:</label>
+        <select name="card_id">
+          <option value="MTN">MTN</option>
+          <option value="Airtel Tigo">Airtel Tigo</option>
+          <option value="Telecel">Telecel</option>
+        </select>
+
+        <label for="quantity">Quantity Sold:</label>
+        <input type="number" name="quantity" required>
+
+        <input type="submit" value="Record Sale">
+      </form>
+    </section>
+
+    <section id="stock">
+      <h2>🗂️ Card Stock</h2>
+      <!-- PHP: Table of card quantities by vendor/provider -->
+    </section>
+
+    <section id="cashflow">
+      <h2>💰 Cash In / Cash Out</h2>
+      <form action="cashflow.php" method="POST">
+        
+        <select name="type">
+          <option value="deposit">Deposit</option>
+          <option value="cashout">Cash Out</option>
+        </select>
+        <input type="number" name="amount"  placeholder="Amount" >
+        <input type="number" name="customer-number" placeholder="Customer Number">
+        <input type="submit" value="Save">
+      </form>
+    </section>
+
+    <section id="reports">
+      <h2>📅 Reports</h2>
+      <form method="GET" action="report.php">
+        <select name="period">
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="monthly">Monthly</option>
+        </select>
+        <input type="submit" value="Generate">
+      </form>
+      <!-- Display result from report.php -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <?= date('Y') ?> CreditVendorPro | Built by Yann</p>
+  </footer>
+</body>
+</html>
