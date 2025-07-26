@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/sales.css">
+    <title>Document</title>
+</head>
+<body>
+
+      <header>
+    <h1>📱 Credit Vendor Management</h1>
+    <nav>
+      <a href="Dashboard.html">Dashboard</a>
+      <a href="sales.html">Sales & Card Stock</a>
+      
+      <a href="Cash-In&out.html"> Record Cash In/Out</a>
+      
+      
+    </nav>
+  </header>
+
+
+
+  <main>
+     <section id="sales-entry">
+  <h2>🧾 Record a New Sale</h2>
+  <form action="sales.php" method="POST">
+    <label for="vendor">Vendor:</label>
+    <select name="vendor_id" required>
+      <?php include 'get_vendors.php'; // loop vendors from database ?>
+    </select>
+
+    <label for="card">Card Type:</label>
+    <select name="card_id" required>
+          <option value="card-type">select card type</option>
+          <option value="MTN">MTN</option>
+          <option value="Airtel Tigo">Airtel Tigo</option>
+          <option value="Telecel">Telecel</option>
+      <?php include 'get_cards.php'; // loop card types ?>
+    </select>
+
+    <label for="quantity">Quantity Sold:</label>
+    <input type="number" name="quantity" min="1" required>
+
+    <input type="submit" name="record_sale" value="Submit Sale">
+  </form>
+</section>
+        
+  </main>
+
+
+
+  
+    <section id="stock">
+      <h2>🗂️ Card Stock:20 Cards</h2> <br>
+      <h3>MTN Cards:</h3> <br>
+      <h3> Telecel Cards:</h3> <br>
+      <h3> Airtel Tigo Cards:</h3>
+
+      <!-- PHP: Table of card quantities by vendor/provider -->
+    </section>
+  
+
+ 
+    
+</body>
+</html>

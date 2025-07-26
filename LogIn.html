@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .login-container {
+            background: #fff;
+            max-width: 350px;
+            margin: 60px auto;
+            padding: 30px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background: #0056b3;
+        }
+            h1{
+                font-size: 24px;
+                color: #333;
+                text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: #007bff;
+            display: block;
+
+        }
+        a:hover {
+            color: #0e0f0f;
+        }
+    </style>
+</head>
+<body>
+    <h1>📱 Agent Vendor Management</h1>
+
+    <div class="login-container">
+        <h2>Vendor Login</h2>
+        <form>
+            <label for="number">Phone Number</label>
+            <input type="tel" id="number" name="number" required pattern="[0-9]{10,15}">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="6">
+
+            <button type="submit">Login</button> <br>
+            <a href="ResgiterVendors.html">Not an account register</a> <br>
+            <a href="">Forgot Pasword</a>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/cash in-out.css">
+    <title>Document</title>
+</head>
+<body>
+          <header>
+    <h1>📱 Credit Vendor Management</h1>
+    <nav>
+      <a href="Dashboard.html">Dashboard</a>
+      <a href="sales.html">Sales & Card Stock</a>
+      
+      <a href="Cash-In&out.html"> Record Cash In/Out</a>
+      
+      
+    </nav>
+  </header>
+
+   <main>
+      <section id="cashflow">
+      <h2>💰 Cash In / Cash Out</h2>
+      <form action="cashflow.php" method="POST">
+        
+        <select name="type">
+          <option value="deposit">Deposit</option>
+          <option value="cashout">Cash Out</option>
+        </select>
+        <input type="number" name="amount"  placeholder="Amount" >
+        <input type="number" name="customer-number" placeholder="Customer Number">
+        <input type="submit" value="Save">
+      </form>
+    </section>
+    
+   </main>
+
+ 
+    
+</body>
+</html>
