@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Credit Vendor Dashboard</title>
+  <link rel="stylesheet" href="style/Dashboard.css"> <!-- add styles later -->
+</head>
+<body>
+  <header>
+    <h1>📱 Agent Vendors Management</h1>
+    <nav>
+      <a href="Dashboard.html">Dashboard</a>
+      <a href="sales.html">Sales & Card stock</a>
+      
+      <a href="Cash-In&out.html"> Record Cash In/Out</a>
+      
+      
+    </nav>
+  </header>
+<section id="dashboard">
+      <h2>📊 Overview</h2>
+      <p>Total Sales Today: <!-- echo PHP value --></p>
+      <p>Total Credit Balance: <!-- auto-calculate --></p>
+      <p>Low Stock Alerts: <!-- from stock.php --></p>
+    </section>
+
+
+  <main>
+    
+
+    <section id="sales-entry">
+      <h2>🧾 Record a Sale</h2>  <br>
+      
+    
+        
+      
+              <button> <a href="sales.html"> click to Record a sale</a></button> 
+      
+    </section>
+
+    <section id="stock">
+      <h2>🗂️ Card Stock</h2>
+      <!-- PHP: Table of card quantities by vendor/provider -->
+
+              <button> <a href="sales.html"> view Stock</a></button> 
+        
+    </section>
+
+    <section id="cashflow">
+      <h2>💰 Cash In / Cash Out</h2> <br>
+
+              <button> <a href="sales.html"> Record a Transaction</a></button> 
+
+  
+    </section>
+
+    <section id="reports">
+      <h2>📅 Reports</h2>
+      <form method="GET" action="report.php">
+        <select name="period">
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="monthly">Monthly</option>
+        </select>
+        <input type="submit" value="Generate">
+      </form>
+      <!-- Display result from report.php -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <?= date('Y') ?> CreditVendorPro | Built by Intellistream Srv</p>
+  </footer>
+</body>
+</html>
